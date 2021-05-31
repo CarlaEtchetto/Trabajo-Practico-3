@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fondo2"
+    android:orientation="vertical"
+    tools:context=".seleccionProducto">
+
+    <RadioGroup
+        android:id="@+id/r_productos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/t_seleccionProductos"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:fontFamily="@font/merienda"
+            android:text="SELECCIONE PRODUCTO"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/r_cono"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/merienda"
+            android:text="CONO"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/r_cuarto"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:fontFamily="@font/merienda"
+            android:text="1/4 KILO"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/r_kilo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:fontFamily="@font/merienda"
+            android:text="KILO"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/b_seleccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merienda"
+            android:text="seleccionar"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/b_gustos"
+        android:layout_width="121dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/merienda"
+        android:text="agregar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/r_productos" />
+
+    <Spinner
+        android:id="@+id/s_cajeros"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s_adicional" />
+
+    <Button
+        android:id="@+id/b_hacerPedido"
+        android:layout_width="331dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/merienda"
+        android:text="hecer pedido"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/s_cajeros" />
+
+    <EditText
+        android:id="@+id/h_ingresoGustos"
+        android:layout_width="266dp"
+        android:layout_height="48dp"
+
+        android:ems="10"
+        android:fontFamily="@font/merienda"
+        android:hint="Ingrese uno a uno los gustos"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/b_gustos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/r_productos" />
+
+    <LinearLayout
+        android:id="@+id/ver_producto"
+        android:layout_width="323dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_hacerPedido"
+        app:layout_constraintVertical_bias="0.072">
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/s_adicional"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/h_ingresoGustos" />
+</androidx.constraintlayout.widget.ConstraintLayout>
